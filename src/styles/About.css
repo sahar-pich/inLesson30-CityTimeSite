@@ -1,0 +1,152 @@
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+    font-size: 36px;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-section {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-section:last-of-type {
+    border-bottom: none;
+}
+
+.about-section h2 {
+    font-size: 22px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-section p {
+    font-size: 15px;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-section li {
+    font-size: 15px;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.about-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.about-section strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.about-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+.footer-section {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.footer-section p {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 25px;
+    }
+
+    .about-container h1 {
+        font-size: 28px;
+    }
+
+    .about-section h2 {
+        font-size: 19px;
+    }
+
+    .about-section p,
+    .about-section li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .about-container h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .about-section {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .about-section h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .about-section p,
+    .about-section li {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .about-section li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section p {
+        font-size: 14px;
+    }
+}

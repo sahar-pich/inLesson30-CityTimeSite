@@ -1,0 +1,147 @@
+.city-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.city-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    text-align: center;
+}
+
+.city-card-link:hover .city-card {
+    background-color: var(--card-hover-bg);
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.city-card.error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-color: var(--error-color);
+}
+
+.city-card.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.city-card h3 {
+    font-size: 18px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.day-night-emoji {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.city-time {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 10px 0;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.city-timezone {
+    font-size: 13px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.error-text {
+    color: var(--error-color);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.timezone {
+    font-size: 12px;
+    color: var(--text-color);
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--accent-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .city-card {
+        padding: 15px;
+        min-height: 150px;
+    }
+
+    .city-card h3 {
+        font-size: 15px;
+    }
+
+    .city-time {
+        font-size: 22px;
+    }
+
+    .day-night-emoji {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .city-card {
+        padding: 12px;
+        min-height: 120px;
+    }
+
+    .city-card h3 {
+        font-size: 13px;
+    }
+
+    .city-time {
+        font-size: 18px;
+    }
+
+    .day-night-emoji {
+        font-size: 18px;
+    }
+
+    .city-timezone {
+        font-size: 11px;
+    }
+}
