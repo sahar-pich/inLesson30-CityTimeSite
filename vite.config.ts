@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/inLesson30-CityTimeSite/',
+  base: '/lesson30-test/', // הוסף את שם הריפו שלך כאן
 })
